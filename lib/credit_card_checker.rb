@@ -1,15 +1,21 @@
 def visa?(card)
   # TODO: A visa card starts with a 4
- if /^4/.match(card)
-  return true
-    else
-  return false
+  no_spaces = card.delete(' ')
+  if /^4/.match(no_spaces)
+    true
+  else
+    false
   end
 end
 
 def mastercard?(card)
   # TODO: A mastercard card starts with a 5
- p /^5/.match(card)
+  no_spaces = card.delete(' ')
+  if /^5/.match(no_spaces)
+    true
+  else
+    false
+  end
 end
 
 def valid_card?(card)
